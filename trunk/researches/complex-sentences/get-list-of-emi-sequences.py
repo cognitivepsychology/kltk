@@ -10,14 +10,13 @@ import sys
 import kltk.corpus.sejong.sense
 
 def cat (str1, str2):
-	return str1 + " " + str2
+    return str1 + " " + str2
 
 def combine_list(a, b):
-	temp = []
-	for i in xrange(0, len(a)):
-		temp.append(a[i] + "/" + b[i])
-	return temp
-
+    temp = []
+    for i in xrange(0, len(a)):
+        temp.append(a[i] + "/" + b[i])
+        return temp
 
 class Encode:
    def __init__(self, stdout, enc):
@@ -34,20 +33,21 @@ TAG_E = re.compile('(EC|EF|ETM|ETN)')
 form = []
 pos = []
 for sentence in corpus:
-	form = []
-	pos = []
-	for word in sentence.wordlist:
-		#print word.gid, word.ord, word.form
-		for morph in word.morphlist:
-			#print morph.form, morph.pos, morph.sem
-			if TAG_E.match(morph.pos):
-				form.append(morph.form)
-				pos.append(morph.pos)
-			#elif morph.pos == 'VX' :
-			#	form.append(morph.form)
-			#	pos.append(morph.pos)
-	if len(form) > 0 :
-		print sentence.gid, reduce(cat, combine_list(form, pos)) #, sentence.form
+    form = []
+    pos = []
+    for word in sentence.wordlist:
+        #print word.gid, word.ord, word.form
+        for morph in word.morphlist:
+            #print morph.form, morph.pos, morph.sem
+            if TAG_E.match(morph.pos):
+                form.append(morph.form)
+                pos.append(morph.pos)
+            #elif morph.pos == 'VX' :
+            #   form.append(morph.form)
+            #   pos.append(morph.pos)
+    if len(form) > 0 :
+        print sentence.gid, reduce(cat, combine_list(form, pos)) 
+        print sentence.form
 
 
 
@@ -70,7 +70,7 @@ for sentence in corpus:
 #            if word.morphlist[0].pos == "VX":
 #                if word.ord > 2:
 #                    print sentence.wordlist[word.ord-2].form, \
-# 							word.morphlist[0].form
+#                           word.morphlist[0].form
 # 
 # 
 # # print clause
@@ -80,18 +80,18 @@ for sentence in corpus:
 # #
 # 
 # for sentence in corpus:
-# 	print sentence.form
-# 	for w in sentence:
-# 		print w.form,
+#   print sentence.form
+#   for w in sentence:
+#       print w.form,
 # 
 #         if w.has('ETM'):
-# 			if w.ord < len(sentence.wordlist):
-# 	        	if sentence.wordlist[w.ord].has('NNB'):
-#     	        	print "<nnb>",
-# 				else:
-# 					print "<ETM>"
+#           if w.ord < len(sentence.wordlist):
+#               if sentence.wordlist[w.ord].has('NNB'):
+#                   print "<nnb>",
+#               else:
+#                   print "<ETM>"
 #             else:
-#                	print "<ETM>"
+#                   print "<ETM>"
 #         elif w.has('(ETN)'):
 #             print "<ETN>"
 #         elif w.has('VA[+]게/EC'):
@@ -99,16 +99,16 @@ for sentence in corpus:
 #         elif w.has('V.+[+]게/EC'):
 #             print w.ma_str, "<EC>",
 #         elif w.has('EC'):
-# 			if w.ord < len(sentence.wordlist):
-# 	            if sentence.wordlist[w.ord].has('VX'):
-#     	        	print "<vx>",
+#           if w.ord < len(sentence.wordlist):
+#               if sentence.wordlist[w.ord].has('VX'):
+#                   print "<vx>",
 #                 else:
-# 					print "<EC>"
+#                   print "<EC>"
 #             else:
 #                 print "<EC>"
 #         elif w.has('EF'):
 #             print "<EF>"
-# 	print
+#   print
 #     print "========"
 # 
 # 
