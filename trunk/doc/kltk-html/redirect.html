@@ -1,0 +1,38 @@
+<html><head><title>Epydoc Redirect Page</title>
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="pragma" content="no-cache" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+<!--
+var pages = ["kltk.corpus.sejong.parsed.TreeParseError-c", "kltk.corpus.sejong.Allomorph.Allomorph-c", "kltk.corpus.sejong.parsed.ForestWalker-c", "kltk.corpus.sejong.parsed.TerminalNode-c", "kltk.corpus.sejong.dep.ForestWalker-c", "kltk.corpus.sejong.parsed.Sentence-c", "kltk.corpus.sejong.parsed.TreeBank-c", "kltk.corpus.sejong.sense.Sentence-c", "kltk.corpus.sejong.parsed.Encode-c", "kltk.corpus.sejong.dep.TreeBank-c", "kltk.corpus.sejong.sense.Corpus-c", "kltk.corpus.sejong.sense.Encode-c", "kltk.corpus.sejong.morph.Morph-c", "kltk.corpus.sejong.parsed.Node-c", "kltk.corpus.sejong.parsed.Test-c", "kltk.corpus.sejong.parsed.Tree-c", "kltk.corpus.sejong.sense.Morph-c", "kltk.corpus.sejong.dep.Encode-c", "kltk.corpus.sejong.morph.Word-c", "kltk.corpus.sejong.sense.Test-c", "kltk.corpus.sejong.sense.Word-c", "kltk.corpus.sejong.Allomorph-m", "kltk.corpus.sejong.dep.Node-c", "kltk.corpus.sejong.dep.Test-c", "kltk.corpus.sejong.dep.Tree-c", "kltk.corpus.sejong.parsed-m", "kltk.corpus.sejong.morph-m", "kltk.corpus.sejong.sense-m", "kltk.corpus.sejong.dep-m", "kltk.corpus.sejong-m", "kltk.corpus-m", "kltk-m"];
+var dottedName = get_anchor();
+if (dottedName) {
+    var target = redirect_url(dottedName);
+    if (target) window.location.replace(target);
+}
+// -->
+</script>
+
+<h3>Epydoc Auto-redirect page</h3>
+
+<p>When javascript is enabled, this page will redirect URLs of
+the form <tt>redirect.html#<i>dotted.name</i></tt> to the
+documentation for the object with the given fully-qualified
+dotted name.</p>
+<p><a id="message"> &nbsp; </a></p>
+
+<script type="text/javascript">
+<!--
+if (dottedName) {
+    var msg = document.getElementById("message");
+    msg.innerHTML = "No documentation found for <tt>"+
+                    dottedName+"</tt>";
+}
+// -->
+</script>
+
+</body>
+</html>
