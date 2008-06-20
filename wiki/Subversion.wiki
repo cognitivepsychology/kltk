@@ -2,7 +2,7 @@
 #labels Dev-Help
 === ignore ==
 
-Edit your $HOME/.subversion/config: find 'global-ignores' and add '*.pyc'
+Edit your $HOME/.subversion/config: find '`global-ignores`' and add '`*.pyc`'
 {{{
 global-ignores = *.pyc
 }}}
