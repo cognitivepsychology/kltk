@@ -1,0 +1,12 @@
+
+=== ignore ==
+
+Edit your $HOME/.subversion/config: find 'global-ignores' and add '*.pyc'
+{{{
+global-ignores = *.pyc
+}}}
+
+To ignore specific files in the current directory:
+{{{
+$ svn propset svn:ignore <filename> .
+}}}
