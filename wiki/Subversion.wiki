@@ -1,5 +1,6 @@
 #summary Subversion Tips
 #labels Dev-Help
+
 === ignore ==
 
 Edit your $HOME/.subversion/config: find '`global-ignores`' and add '`*.pyc`'
@@ -11,3 +12,12 @@ To ignore specific files in the current directory:
 {{{
 $ svn propset svn:ignore <filename> .
 }}}
+
+
+=== keywords ===
+
+To set CVS style tag:
+{{{
+$ svn propset svn:keywords "Id" <file>
+}}}
+then "$Id$" tags in <file> get automatically replaced. 
