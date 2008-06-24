@@ -1,3 +1,8 @@
+#!/usr/bin/gawk -f
+# count-emi-naive.awk
+#
+# count number of emi in a sentence (see section 4.2.2)
+# 
 BEGIN{
 	FS = "#####!#####";
 }

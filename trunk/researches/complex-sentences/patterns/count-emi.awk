@@ -1,3 +1,8 @@
+#!/usr/bin/gawk -f
+# count-emi.awk
+#
+# count number of emi in a sentence (sectio 4.2.2)
+#  - does NOT count "EC VX" sequences
 BEGIN{
 	FS = "#####!#####";
 }
