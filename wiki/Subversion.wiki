@@ -10,8 +10,14 @@ global-ignores = *.pyc
 
 To ignore specific files in the current directory:
 {{{
-$ svn propset svn:ignore <filename> .
+$ svn propedit svn:ignore .
 }}}
+and add items list
+{{{
+*.tmp
+*.log
+}}}
+
 
 
 === keywords ===
