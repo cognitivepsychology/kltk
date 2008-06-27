@@ -15,4 +15,9 @@ sejong-sense-sentence.txt : sejong-sense.txt
 sejong-sense-sentence-EF-SF.txt : sejong-sense-sentence.txt
 	gawk -f select_EF-SF-SS.gawk sejong-sense-sentence.txt > sejong-sense-sentence-EF-SF.txt
 
+# list of sentences (horizontally aligned corpus)
+# mark word boundry
+# sentence gid, sentence form, morphologies
+sejong-sense-sentence-wb.txt : sejong-sense.txt
+	~/kltk/scripts/corpus/sejong/sense/list.py hw sejong-sense.txt > sejong-sense-sentence-wb.txt
 
