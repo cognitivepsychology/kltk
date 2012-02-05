@@ -1,0 +1,3 @@
+To install KLTK, run setup.py:
+
+  sudo python setup.py install
